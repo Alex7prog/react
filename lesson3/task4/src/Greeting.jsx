@@ -22,7 +22,7 @@ const getAge = birthDate => {
 const Greeting = props => {
   return (
     <div className="greeting">
-      {`My name is ${props.user.name} ${props.user.lastName}. I'm 
+      {`My name is ${props.user.firstName} ${props.user.lastName}. I'm 
       ${getAge(props.user.birthDate)} years old`}
     </div>
   );

@@ -9,7 +9,7 @@ const rootElement = document.querySelector('#root');
 const root = createRoot(rootElement);
 
 const user = {
-  name: 'John',
+  firstName: 'John',
   lastName: 'Doe',
   birthDate: new Date('2001-01-01T11:11:11.819Z'),
 };
