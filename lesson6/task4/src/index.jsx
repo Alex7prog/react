@@ -8,4 +8,4 @@ import Status from './Status';
 const rootElement = document.querySelector('#root');
 const root = createRoot(rootElement);
 
-root.render(<Status />);
+root.render(<Status isOnline={false} />);
