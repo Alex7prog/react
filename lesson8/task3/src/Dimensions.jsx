@@ -24,7 +24,7 @@ class Dimensions extends Component {
 
   setDimensions = (width, height) => {
     this.setState({ width, height });
-    document.title = `${width}px x ${height}px`;
+    document.title = `${width}px - ${height}px`;
   };
 
   render() {
