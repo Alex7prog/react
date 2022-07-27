@@ -7,15 +7,8 @@ class UsersList extends Component {
     super(props);
     this.state = {
       filterText: '',
-      count: '',
     };
   }
-
-  // handleNextPage = () => {
-  //   this.setState({
-  //     page: this.state.page + 1,
-  //   });
-  // };
 
   handleFilter = e => {
     e.preventDefault();
