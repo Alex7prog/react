@@ -24,12 +24,14 @@ class ConnectionStatus extends Component {
   };
 
   render() {
+    const { netStatus } = this.state;
+    console.log('netStatus: ', netStatus);
     return (
       <>
-        {this.state.netStatus === 'online' ? (
-          <div className="status">Online</div>
+        {netStatus === 'online' ? (
+          <div className="status">{netStatus}</div>
         ) : (
-          <div className="status status_offline">Offline</div>
+          <div className="status status_offline">{netStatus}</div>
         )}
       </>
     );
