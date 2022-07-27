@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 class UserForm extends Component {
   constructor(props) {
     super(props);
-    console.log('props: ', props);
     this.state = {
       name: '',
       student: false,
-      occupation: 'Berlin',
+      occupation: '',
       about: '',
     };
   }
