@@ -2,11 +2,23 @@ import React, { Component } from 'react';
 import Board from './Board';
 
 class Game extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  // render() {
+  //   return <Board />;
+  // }
   render() {
     return (
       <div className="game">
         <div className="game-board">
           <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
         </div>
       </div>
     );
