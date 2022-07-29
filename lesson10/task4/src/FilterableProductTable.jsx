@@ -9,22 +9,19 @@ class FilterableProductTable extends React.Component {
       filterText: '',
       inStockOnly: false,
     };
-
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.handleInStockChange = this.handleInStockChange.bind(this);
   }
 
-  handleFilterTextChange(filterText) {
+  handleFilterTextChange = filterText => {
     this.setState({
       filterText: filterText,
     });
-  }
+  };
 
-  handleInStockChange(inStockOnly) {
+  handleInStockChange = inStockOnly => {
     this.setState({
       inStockOnly: inStockOnly,
     });
-  }
+  };
 
   render() {
     return (
