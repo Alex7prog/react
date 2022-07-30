@@ -1,17 +1,9 @@
 import React from 'react';
-// import '@fortawesome/react-fontawesome';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-// import 'font-awesome/css/font-awesome.min.css';
-// import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 class Expand extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHide: true,
-    };
-  }
+  state = {
+    isHide: true,
+  };
 
   handleToggle = () => {
     this.setState({
@@ -30,11 +22,6 @@ class Expand extends React.Component {
             ) : (
               <i className="fas fa-chevron-up" />
             )}
-            {/* {this.state.isHide ? (
-              <FontAwesomeIcon icon={faChevronDown} />
-            ) : (
-              <FontAwesomeIcon icon={faChevronUp} />
-            )} */}
           </button>
         </div>
         {!this.state.isHide && <div className="expand__content">{this.props.children}</div>}
