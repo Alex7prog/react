@@ -4,29 +4,36 @@ import Logout from './Logout';
 import Spinner from './Spinner';
 
 const Auth = () => {
-  const [loginStatus, setLoginStatus] = useState('logout');
+  const [loginStatus, setLoginStatus] = useState({
+    isLogin: false,
+    isSpinner: false,
+  });
 
   const handleLogin = () => {
-    setLoginStatus('load');
+    setLoginStatus(...{ ...loginStatus, isSpinner: true });
 
     setTimeout(() => {
-      setLoginStatus('login');
+      setLoginStatus({ ...loginStatus, isLogin: true, isSpinner: false });
     }, 2000);
   };
 
   const handleLogout = () => {
-    setLoginStatus('logout');
+    setLoginStatus({ ...loginStatus, isLogin: false });
   };
+
+  const { isLogin, isSpinner } = loginStatus;
+
+  if (isSpinner) {
+    return (
+      <div className="status">
+        <Spinner size={35} />
+      </div>
+    );
+  }
 
   return (
     <div className="status">
-      {loginStatus === 'logout' ? (
-        <Login onLogin={handleLogin} />
-      ) : loginStatus === 'load' ? (
-        <Spinner size={35} />
-      ) : (
-        <Logout onLogout={handleLogout} />
-      )}
+      {isLogin ? <Logout onLogout={handleLogout} /> : <Login onLogin={handleLogin} />}
     </div>
   );
 };
@@ -34,6 +41,7 @@ const Auth = () => {
 export default Auth;
 
 // option - class component
+// old solution
 
 // class Auth extends Component {
 //   state = {
