@@ -10,7 +10,7 @@ const Auth = () => {
   });
 
   const handleLogin = () => {
-    setLoginStatus(...{ ...loginStatus, isSpinner: true });
+    setLoginStatus({ ...loginStatus, isSpinner: true });
 
     setTimeout(() => {
       setLoginStatus({ ...loginStatus, isLogin: true, isSpinner: false });
