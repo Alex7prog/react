@@ -55,8 +55,8 @@ class UsersList extends Component {
           goNext={this.handleNextPage}
           goPrev={this.handlePrevPage}
           currentPage={currentPage}
-          usersCount={users.length}
-          usersPerPage={usersPerPage}
+          totalItems={users.length}
+          itemsPerPage={usersPerPage}
         />
         <ul className="users">
           {usersList.map(user => (

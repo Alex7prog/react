@@ -2,11 +2,11 @@ import React from 'react';
 
 // Refactoring
 
-// props: handlers: goPrev, goNext; currentPage, usersCount, usersPerPage
+// props: handlers: goPrev, goNext; currentPage, totalItems, itemsPerPage
 
-const Pagination = ({ goPrev, goNext, currentPage, usersCount, usersPerPage }) => {
+const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) => {
   const isPrevPageAvailable = currentPage > 1;
-  const isNextPageAvailable = currentPage < usersCount / usersPerPage;
+  const isNextPageAvailable = currentPage < totalItems / itemsPerPage;
 
   return (
     <div className="pagination">
