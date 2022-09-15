@@ -1,5 +1,9 @@
 import React from 'react';
 
+// props
+
+// name, age
+
 const User = ({ name, age }) => {
   return (
     <li className="user">

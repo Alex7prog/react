@@ -26,6 +26,26 @@ const users = [
     age: 45,
     name: 'Sam',
   },
+  {
+    id: 'id-4',
+    age: 18,
+    name: 'Ann',
+  },
+  {
+    id: 'id-5',
+    age: 45,
+    name: 'Din',
+  },
+  {
+    id: 'id-6',
+    age: 18,
+    name: 'Lisa',
+  },
+  {
+    id: 'id-7',
+    age: 45,
+    name: 'John',
+  },
 ];
 
 const root = createRoot(document.querySelector('#root'));
